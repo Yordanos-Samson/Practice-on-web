@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>muzica.com Music Library Website</title>
+   <link rel="stylesheet" href="indie.css">
+</head>
+
+<body>
+<section>
+    <a href="Home.html"><img class="logo" src="logo.jpeg"></a>
+    <br>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="updates.html">Updates</a>
+        <a style="border:3px solid;background-color:rgb(44, 44, 145)" href="login.html">LOGIN</a>
+    </nav>
+</section>
+
+<h1>   <a href="browse.html"> <span style="font-family: Arial, Helvetica, sans-serif;font-size: 20px;margin-right: 20px;">BACK </span></a>   PAGE 1 :    </h1> 
+
+
+<div class="list">
+    <table id="songTable">
+        <thead>
+        <tr>
+            <th>ARTIST</th>
+            <th>SONG</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-src="music/indie/505.mp3" data-song="505" data-artist="ARCTIC MONKEYS" data-pic="pics/arc.jpg">
+            <td>Arctic Monkeys</td>
+            <td>505</td>
+        </tr>
+
+        <tr data-src="music/indie/I Wanna Be Yours.mp3" data-song="I WANNA BE YOURS" data-artist="ARCTIC MONKEYS"  data-pic="pics/arc.jpg">
+            <td>Arctic Monkeys</td>
+            <td>I Wanna Be Yours</td>
+        </tr>
+        <tr data-src="music/indie/Apocalypse  Cigarettes After Sex.mp3" data-song="APOCALYPSE" data-artist="Cigarettes After Sex"  data-pic="pics/cig.jpg">
+            <td>Cigarettes After Sex</td>
+            <td>Apocalypse</td>
+        </tr>
+        <tr data-src="music/indie/d4vd  Here With Me.mp3" data-song="HERE WITH ME " data-artist="D4VD"  data-pic="pics/cig.jpg">
+            <td>D4vd</td>
+            <td>Here With Me</td>
+        </tr>
+        <tr data-src="music/indie/ David Kushner  Daylight.mp3" data-song="DAYLIGHT" data-artist="DAVID KUSHNER" data-pic="pics/dav.jpg" >
+            <td>David Kushner</td>
+            <td> Daylight</td>
+        </tr>
+        <tr data-src="music/indie/HOTEL UGLY  SHUT UP.mp3" data-song="SHUT UP" data-artist="HOTEL UGLY" data-pic="pics/cig.jpg" >
+            <td>Hotel Ugly</td>
+            <td>Shut Up</td>
+        </tr>
+        <tr data-src="music/indie/Indila  Tourner Dans Le Vide.mp3" data-song=" TOURNER DANS Le VIDE" data-artist="INDILA"  data-pic="pics/ind.jpg">
+            <td>Indila</td>
+            <td>Tourner Dans Le Vide</td>
+        </tr>
+
+        <tr data-src="music/indie/Lana Del Rey  Born To Die.mp3" data-song=" BORN TO DIE" data-artist="LANA DEL REY" data-pic="pics/lana.jpg">
+            <td> Lana Del Rey</td>
+            <td>Born To Die</td>
+        </tr>
+        <tr data-src="music/indie/Lana Del Rey  Summertime Sadness.mp3" data-song="SUMMERTIME MADNESS" data-artist="LANA DEL REY" data-pic="pics/lana.jpg">
+            <td>Lana Del Rey</td>
+            <td>Summertime Madness</td>
+        </tr>
+        <tr data-src="music/indie/Lord Huron  The Night We Met.mp3" data-song="THE NIGHT WE MET" data-artist="LORD HURONS" data-pic="pics/arc.jpg">
+            <td>Lord Hurons</td>
+            <td>The Night We Met</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="player">
+    <div class="pic"><img src="#" id="artistImage" ></div>
+    <audio id="audioPlayer" src="#" controls autoplay></audio>
+    <p id="song" style="margin-bottom: 2px; margin-top: 20px;">TAKE MY BREATH</p>
+    <h3 id="artist" style="margin-bottom: 35px;">THE WEEKND</h3>
+</div>
+
+<footer>
+    <p>&copy; 2024 <a href="Home.html"><span style="color:brown">muzica.com</span> </a> Music Library Website. All Rights Reserved.
+    </p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tableRows = document.querySelectorAll("#songTable tbody tr");
+
+        const defaultRow = tableRows[0];
+        updateAudioPlayer(defaultRow);
+
+        // Add click event listener to each table row
+        tableRows.forEach(row => {
+            row.addEventListener("click", function () {
+                updateAudioPlayer(row);
+            });
+        });
+
+        function updateAudioPlayer(row) {
+            const audioPlayer = document.getElementById("audioPlayer");
+            const songName = document.getElementById("song");
+            const artistName = document.getElementById("artist");
+            const artistImage = document.getElementById("artistImage");
+
+
+            const src = row.getAttribute("data-src");
+            const song = row.getAttribute("data-song");
+            const artist = row.getAttribute("data-artist");
+            const image = row.getAttribute("data-pic");
+
+            audioPlayer.src = src;
+            songName.textContent = song;
+            artistName.textContent = artist;
+            artistImage.src = image;
+
+
+        }
+    });
+</script>
+</body>
+</html>

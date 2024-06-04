@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+    .audiocont{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        width:60%;
+        height:500px;
+        border-color: black;
+        border-style:ridge;
+        background-color: bisque;
+        background-image: linear-gradient(to bottom,rgb(107, 36, 126),yellow);
+        margin:auto;
+    }
+
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="audiocont">
+    <h2> Take my breath</h2>
+    <p> The weeknd</p></br>
+    <audio style="border-radius:15px;block;margin-left:auto;margin-right:auto;width:70%;height:100px;background-image:linear-gradient(to right,red,orange); " controls src="song.mp3" >  
+    </div>
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotate Div</title>
+<style>
+  .rotating-div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the div */
+    animation: rotate 10s linear infinite; /* Name of the animation, duration, timing function, iteration count */
+  }
+
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg); /* Initial position */
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg); /* Final position */
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="rotating-div"></div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>muzica.com Music Library Website</title>
+    <link rel="stylesheet" href="pop.css">
+</head>
+
+<body>
+<section>
+    <a href="Home.html"><img class="logo" src="logo.jpeg"></a>
+    <br>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="updates.html">Updates</a>
+        <a style="border:3px solid;background-color:rgb(44, 44, 145)" href="login.html">LOGIN</a>
+    </nav>
+</section>
+
+<h1>   <a href="pop.html"> <<  </a> PAGE 2 :     </h1> 
+
+
+<div class="list">
+    <table id="songTable">
+        <thead>
+        <tr>
+            <th>ARTIST</th>
+            <th>SONG</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-src="music/pop/Dua Lipa  New Rules.mp3" data-song="NEW RULES" data-artist="DUA LIPA" data-pic="pics/dua.jpg">
+            <td>Dua Lipa</td>
+            <td>New Rules</td>
+        </tr>
+        <tr data-src="music/pop/Ed Sheeran  Shape of You.mp3" data-song="SHAPE OF YOU" data-artist="ED SHEERAN"  data-pic="pics/ed.jpg">
+            <td>Ed Sheeran</td>
+            <td>Shape Of You</td>
+        </tr>
+        <tr data-src="music/pop/Eminem  Mockingbird.mp3" data-song="MOCKING BIRD" data-artist="EMINEM"  data-pic="pics/em.jpg">
+            <td>Eminem</td>
+            <td>Mockingbird</td>
+        </tr>
+        <tr data-src="music/pop/GEazy x Bebe Rexha  Me Myself  I.mp3" data-song="ME MYSELF AND I" data-artist="GEAZY FT BEBE REXHA" data-pic="pics/g.jpg" >
+            <td>Geazy ft Bebe Rexha</td>
+            <td> Me Myself and I</td>
+        </tr>
+        <tr data-src="music/pop/Hotline Bling.mp3" data-song="HOTLINE BLING" data-artist="DRAKE" data-pic="pics/drake.jpg" >
+            <td>Drake </td>
+            <td>Hotline Bling</td>
+        </tr>
+        <tr data-src="music/pop/J Cole  MIDDLE CHILD.mp3" data-song="MIDDLE CHILD" data-artist="J COLE"  data-pic="pics/j.jpg">
+            <td>J Cole</td>
+            <td>Middle Child</td>
+        </tr>
+
+        <tr data-src="music/pop/Kendrick Lamar  HUMBLE.mp3" data-song=" HUMBLE" data-artist="KENDRICK LAMAR" data-pic="pics/ken.jpg">
+            <td> Kendrick Lamar</td>
+            <td>Humble</td>
+        </tr>
+        <tr data-src="music/pop/J Cole  mp3" data-song="MIDDLE CHILD" data-artist="J COLE"  data-pic="pics/j.jpg">
+            <td>J Cole</td>
+            <td>Middle Child</td>
+        </tr>
+
+        <tr data-src="music/pop/Maroon 5  Girls Like You ft Cardi B.mp3" data-song="GIRLS LIKE YOU" data-artist="MAROON 5 FT CARDI B " data-pic="pics/car.jpg">
+            <td>Maroon 5</td>
+            <td>Girls Like You</td>
+        </tr>
+        <tr data-src="music/pop/Michael Jackson  Billie Jean.mp3" data-song="BILLIE JEAN" data-artist="MICHAEL JACKSON" data-pic="pics/mic.jpg">
+            <td>Michael Jackson</td>
+            <td>Billie Jean</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="player">
+    <div class="pic"><img src="#" id="artistImage" ></div>
+    <audio id="audioPlayer" src="#" autoplay controls></audio>
+    <p id="song" style="margin-bottom: 2px; margin-top: 20px;">TAKE MY BREATH</p>
+    <h3 id="artist" style="margin-bottom: 35px;">THE WEEKND</h3>
+</div>
+
+<footer>
+    <p>&copy; 2024 <a href="Home.html"><span style="color:brown">muzica.com</span> </a> Music Library Website. All Rights Reserved.
+    </p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tableRows = document.querySelectorAll("#songTable tbody tr");
+
+        const defaultRow = tableRows[0];
+        updateAudioPlayer(defaultRow);
+
+        // Add click event listener to each table row
+        tableRows.forEach(row => {
+            row.addEventListener("click", function () {
+                updateAudioPlayer(row);
+            });
+        });
+
+        function updateAudioPlayer(row) {
+            const audioPlayer = document.getElementById("audioPlayer");
+            const songName = document.getElementById("song");
+            const artistName = document.getElementById("artist");
+            const artistImage = document.getElementById("artistImage");
+
+
+            const src = row.getAttribute("data-src");
+            const song = row.getAttribute("data-song");
+            const artist = row.getAttribute("data-artist");
+            const image = row.getAttribute("data-pic");
+
+            audioPlayer.src = src;
+            songName.textContent = song;
+            artistName.textContent = artist;
+            artistImage.src = image;
+
+
+        }
+    });
+</script>
+</body>
+</html>

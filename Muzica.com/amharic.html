@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>muzica.com Music Library Website</title>
+    <link rel="stylesheet" href="amharic.css">
+</head>
+
+<body>
+<section>
+    <a href="Home.html"><img class="logo" src="logo.jpeg"></a>
+    <br>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="updates.html">Updates</a>
+        <a style="border:3px solid;background-color:rgb(44, 44, 145)" href="login.html">LOGIN</a>
+    </nav>
+</section>
+
+<h1>   <a href="browse.html"> <span style="font-family: Arial, Helvetica, sans-serif;font-size: 20px;margin-right: 20px;">BACK </span></a>   PAGE 1 :    </h1> 
+
+
+<div class="list">
+    <table id="songTable">
+        <thead>
+        <tr>
+            <th>ARTIST</th>
+            <th>SONG</th>
+        </tr>
+        </thead>
+        <tbody>
+
+            <tr data-src="music/amharic/abe.mp3" data-song="SGAJA ANTFE" data-artist="ABEBE TEKA"  data-pic="pics/ted.jpg">
+                <td>Abebe teka</td>
+                <td>Sgaja Antfe</td>
+            </tr>
+    
+
+      
+        <tr data-src="music/amharic/ROPHNAN  SHEGIYE.mp3" data-song="SHEGIYE" data-artist="ROPHNAN"  data-pic="pics/roph.png">
+            <td>Rophnan</td>
+            <td>Shegiye</td>
+        </tr>
+       
+        <tr data-src="music/amharic/atiyo.mp3" data-song=" ATIYO" data-artist="ROPHNAN" data-pic="pics/roph2.jpg">
+            <td>Rophnan</td>
+            <td>Atiyo</td>
+        </tr>
+
+        <tr data-src="music/amharic/Skat Nati  Yena abeba.mp3" data-song="YENE ABEBA" data-artist="SKAT NATI"  data-pic="pics/skat.jpg">
+            <td>Skat Nati</td>
+            <td>Yene Abeba</td>
+        </tr>
+
+        <tr data-src="music/amharic/ted.mp3" data-song="BEGUDE EWOTANA" data-artist="TEDI TADESSE" data-pic="pics/ted.jpg" >
+            <td>Tewodros tadesse</td>
+            <td>Begude ewotana</td>
+        </tr>
+
+        <tr data-src="music/amharic/ገላጋይ.mp3" data-song="GELAGAY" data-artist="YOHANA" data-pic="pics/yo.jpg" >
+            <td>Yohana</td>
+            <td>Gelagay </td>
+        </tr>
+
+        <tr data-src="music/amharic/Gilitun Simign.mp3" data-song="Giltun Simign" data-artist="ZERUBABEL MOLLA" data-pic="pics/zer.jpg">
+            <td>Zerubabel Molla</td>
+            <td>Giltun Smign</td>
+        </tr>
+
+        <tr data-src="music/amharic/Mindinew Zimtash.mp3" data-song="RUSH" data-artist="ARYA STARR"  data-pic="pics/zer.jpg">
+            <td>Zerubabel Molla</td>
+            <td>Mindnew zimtash</td>
+        </tr>
+       
+        </tbody>
+    </table>
+</div>
+
+<div class="player">
+    <div class="pic"><img src="#" id="artistImage" ></div>
+    <audio id="audioPlayer" src="#" controls autoplay></audio>
+    <p id="song" style="margin-bottom: 2px; margin-top: 20px;">TAKE MY BREATH</p>
+    <h3 id="artist" style="margin-bottom: 35px;">THE WEEKND</h3>
+</div>
+
+<footer>
+    <p>&copy; 2024 <a href="Home.html"><span style="color:brown">muzica.com</span> </a> Music Library Website. All Rights Reserved.
+    </p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tableRows = document.querySelectorAll("#songTable tbody tr");
+
+        const defaultRow = tableRows[0];
+        updateAudioPlayer(defaultRow);
+
+        // Add click event listener to each table row
+        tableRows.forEach(row => {
+            row.addEventListener("click", function () {
+                updateAudioPlayer(row);
+            });
+        });
+
+        function updateAudioPlayer(row) {
+            const audioPlayer = document.getElementById("audioPlayer");
+            const songName = document.getElementById("song");
+            const artistName = document.getElementById("artist");
+            const artistImage = document.getElementById("artistImage");
+
+
+            const src = row.getAttribute("data-src");
+            const song = row.getAttribute("data-song");
+            const artist = row.getAttribute("data-artist");
+            const image = row.getAttribute("data-pic");
+
+            audioPlayer.src = src;
+            songName.textContent = song;
+            artistName.textContent = artist;
+            artistImage.src = image;
+
+
+        }
+    });
+</script>
+</body>
+</html>
