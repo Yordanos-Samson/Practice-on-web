@@ -1,0 +1,13 @@
+#hl{
+  color: aquamarine;
+  background-color: bisque;
+  text-align: center;
+}
+#size1{
+    border-radius:10px 20px 30px 20px ;
+    margin: 20px;
+    padding: 10%;
+    background-color: bisque;
+    width:300px;
+    height:400px;
+}

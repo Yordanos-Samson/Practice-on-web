@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" name="f2">
+        <table border="1">
+            <thead>
+                <tr>
+                    <td colspan="2" align="center"><b>USER LOGIN</b></td>
+    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="nam">Username</label>
+                    </td>
+                    <td>
+                        <input type="text" name="nam" id="nam" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="pass" id="pass" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Email">Email</label>
+                    </td>
+                    <td>
+                        <input type="email" name="Email" id="Email" >
+                    </td>
+                </tr>
+                <tr >
+                    <td colspan="2" align="center">
+                        <button onclick="Display()">Login</button>
+                        <button type="reset">Reset</button>
+                        <button onclick="cancel()">Cancel</button>
+                    </td>
+                </tr>
+            </tbody>
+    
+        </table>
+    </form>
+    -->
+    <form action="#" method="post" name="f2">
+        <table border="1">
+            <thead>
+                <tr>
+                    <td colspan="2" align="center"><b>Registration form</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <td>
+                    <label for="fname">First name</label>
+                </td>
+                <td>
+                    <input type="text" name="fname" id="fname">
+                </td>
+                <tr>
+                <td>
+                    <label for="lname">Last name</label>
+                </td>
+                <td>
+                    <input type="text" name="lname" id="lname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="sid">Student Id</label>
+                </td>
+                <td>
+                    <input type="text" name="sid" id="sid">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Sex">Sex</label>
+                </td>
+                <td>
+                        <input type="radio" name="sex" id="male" value="m" >
+                        <label for="male">Male</label>
+                        <input type="radio" name="sex" id="female" value="f" >
+                        <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Email">Email</label>
+                </td>
+                <td>
+                    <input type="email" name="Email" id="Email">
+                </td>
+            </tr>
+            <tr>
+            <td>
+                <label for="unum">Mobile No</label>
+            </td>     
+            <td>
+                <input type="text" name="unum" id="unum">
+            </td>   
+            </tr>
+            <tr>
+                <td>
+                    <label for="Dep">Department</label>
+                </td>
+                <td>
+                    <select name="Dep" id="Dep">
+                        <option value="Is" selected="selected">IS</option>
+                        <option value="b">cs</option>
+                        <option value="c">se</option>
+                        <option value="d">ee</option>
+                    </select>
+                    <input type="checkbox" name="fruit">
+                </td>
+               
+            </tr>
+            <tr>
+                <td>
+                    <label for="photo">photo</label>
+                </td>
+                <td>
+                    <input type="file" name="photo" id="photo" accept="image/*" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" >
+                    <button onclick="validate()">Register</button>
+                    <button type="reset">Reset</button>
+                </td>
+    
+            </tr>
+    
+            </tbody>
+        </table>
+        <div>
+            <input name="country" list="country"placeholder="country">
+            <datalist id="country">
+                <option value="a"></option>
+                <option value="b"></option>
+                <option value="c"></option>
+                <option value="d"></option>
+            </datalist>
+        </div>
+</body>
+</html>
