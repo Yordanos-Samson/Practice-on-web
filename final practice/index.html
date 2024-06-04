@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <link rel="stylesheet" type="text/css" href="c.css">
+    <script src="j.js" type="text/javascript"></script>
+</head>
+<body>
+    <p>HEllo me! <br>this is it <hr font weight="bold"></p>
+    <br>
+    <table border="1" style="border-collapse:collapse;padding: 50% auto;">
+        <thead>
+            <tr>
+                <td>Country</td>
+                <td colspan="2">Population</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Ethiopia</td>
+                <td>9</td>
+                <td>9</td>
+              <tr> 
+                 <td>9</td>
+                <td>9</td>
+            </tr>
+            </tr>
+            <tr>
+                <td rowspan="2">kenya</td>
+                <td>0</td>
+                <td>0</td>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+ <!--
+    <form method="post" name="f1" action="#" >
+    <fieldset  >
+        <p align="center"><b>Please fill the form</b></p>
+        <label for="name">Enter name </label><input type="text" id="name" name="name"> <br>
+        <label  for="ids"> Enter IDNO </label><input type="text" id="ids" name="ids"><br>
+        <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+    </fieldset>
+  </form>
+  
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <td colspan="3">African countries population</td>
+        </tr>
+        <tr>
+            <td>country</td>
+            <td colspan="2">population</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="3">Ethiopia</td>
+            <td>2001</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>2002</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2003</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Kenya</td>
+            <td>2001</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>2002</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2003</td>
+            <td>4</td>
+        </tr>
+    </tbody>
+</table>
+
+<form action="#" method="post" name="f2">
+    <table border="1">
+        <thead>
+            <tr>
+                <td colspan="2" align="center"><b>USER LOGIN</b></td>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="nam">Username</label>
+                </td>
+                <td>
+                    <input type="text" name="nam" id="nam" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pass">Password</label>
+                </td>
+                <td>
+                    <input type="password" name="pass" id="pass" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Email">Email</label>
+                </td>
+                <td>
+                    <input type="email" name="Email" id="Email" >
+                </td>
+            </tr>
+            <tr >
+                <td colspan="2" align="center">
+                    <button onclick="Display()">Login</button>
+                    <button type="reset">Reset</button>
+                    <button onclick="cancel()">Cancel</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</form>
+-->
+<form action="#" method="post" name="f2">
+    <table border="1">
+        <thead>
+            <tr>
+                <td colspan="2" align="center"><b>Registration form</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            <td>
+                <label for="fname">First name</label>
+            </td>
+            <td>
+                <input type="text" name="fname" id="fname">
+            </td>
+            <tr>
+            <td>
+                <label for="lname">Last name</label>
+            </td>
+            <td>
+                <input type="text" name="lname" id="lname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="sid">Student Id</label>
+            </td>
+            <td>
+                <input type="text" name="sid" id="sid">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Sex">Sex</label>
+            </td>
+            <td>
+                    <input type="radio" name="sex" id="male" value="m" >
+                    <label for="male">Male</label>
+                    <input type="radio" name="sex" id="female" value="f" >
+                    <label for="female">Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Email">Email</label>
+            </td>
+            <td>
+                <input type="email" name="Email" id="Email">
+            </td>
+        </tr>
+        <tr>
+        <td>
+            <label for="Mnum">Mobile No</label>
+        </td>     
+        <td>
+            <input type="text" name="Mnum" id="Mnum">
+        </td>   
+        </tr>
+        <tr>
+            <td>
+                <label for="Dep">Department</label>
+            </td>
+            <td>
+                <select name="Dep" id="Dep">
+                    <option value="Is" selected="selected">IS</option>
+                    <option value="b">cs</option>
+                    <option value="c">se</option>
+                    <option value="d">ee</option>
+                </select>
+                <input type="checkbox" name="fruit">
+            </td>
+           
+        </tr>
+        <tr>
+            <td>
+                <label for="photo">photo</label>
+            </td>
+            <td>
+                <input type="file" name="photo" id="photo" accept="image/*" >
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" >
+                <button onclick="validate()">Register</button>
+                <button type="reset">Reset</button>
+            </td>
+
+        </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
